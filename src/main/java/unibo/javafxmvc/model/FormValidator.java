@@ -5,7 +5,7 @@ public class FormValidator {
         return name.trim().matches("^[a-zA-Z]+( [a-zA-Z]+)*$");
     }
     public static Boolean validateUsername(String username) {
-        return username.matches("^[a-zA-Z0-9]{3,}$");
+        return username.trim().matches("^[a-zA-Z0-9]{3,}$");
     }
     public static Boolean validatePassword(String password) {
         return password.matches("^[^\\s]{4,}$");

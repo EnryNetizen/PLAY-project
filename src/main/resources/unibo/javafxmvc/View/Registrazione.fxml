@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="unibo.javafxmvc.controller.AggiungiUtenteController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="80.0" prefWidth="100.0" />
+        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="800.0" minWidth="10.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="80.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="100.0" prefHeight="150.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="400.0" minHeight="10.0" prefHeight="300.0" valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="100.0" prefHeight="150.0" valignment="CENTER" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="50.0" prefHeight="120.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label alignment="CENTER" text="Aggiungi un nuovo utente" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+        <Button fx:id="btnAddUser" mnemonicParsing="false" onKeyPressed="#btnAddUserOnKeyPressed" onMouseClicked="#btnAddUserOnMouseClicked" prefHeight="38.0" prefWidth="107.0" text="Registrati" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" onMouseClicked="#IndietroOnMouseClicked" prefHeight="32.0" prefWidth="65.0" text="Indietro" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+        </Button>
+        <Label fx:id="lblRegistrato" text="Utente già registrato" textFill="#bca000" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <GridPane alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="271.0" prefWidth="680.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="150.0" prefWidth="300.0" />
+          <ColumnConstraints hgrow="ALWAYS" minWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="60.0" minHeight="30.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+              <Label text="Nome" GridPane.halignment="RIGHT">
+                  <GridPane.margin>
+                      <Insets right="10.0" />
+                  </GridPane.margin>
+              </Label>
+              <Label text="Cognome" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                  <GridPane.margin>
+                      <Insets right="10.0" />
+                  </GridPane.margin>
+              </Label>
+              <Label text="Username" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                  <GridPane.margin>
+                      <Insets right="10.0" />
+                  </GridPane.margin>
+              </Label>
+              <Label text="Password" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                  <GridPane.margin>
+                      <Insets right="10.0" />
+                  </GridPane.margin>
+              </Label>
+              <Label text="Ripeti la password" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                  <GridPane.margin>
+                      <Insets right="10.0" />
+                  </GridPane.margin>
+              </Label>
+              <TextField fx:id="tfNome" alignment="CENTER" maxWidth="1.7976931348623157E308" onKeyTyped="#tfNomeOnKeyTyped" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.vgrow="ALWAYS" />
+              <TextField fx:id="tfCognome" alignment="CENTER" maxWidth="1.7976931348623157E308" onKeyTyped="#tfCognomeOnKeyTyped" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+              <TextField fx:id="tfUsername" alignment="CENTER" maxWidth="1.7976931348623157E308" onKeyTyped="#tfUsernameOnKeyTyped" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+              <PasswordField fx:id="tfPassword" alignment="CENTER" maxWidth="1.7976931348623157E308" onKeyTyped="#tfPasswordOnKeyTyped" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+              <PasswordField fx:id="tfRipetiPassword" alignment="CENTER" maxWidth="1.7976931348623157E308" onKeyTyped="#tfRipetiPasswordOnKeyTyped" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS" />
+              <Label fx:id="lblNome" text="Inserisci solo lettere" textAlignment="CENTER" textFill="#b00000" visible="false" GridPane.columnIndex="2">
+                  <GridPane.margin>
+                      <Insets left="10.0" />
+                  </GridPane.margin>
+              </Label>
+              <Label fx:id="lblCognome" text="Inserisci solo lettere" textAlignment="CENTER" textFill="#b00000" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <GridPane.margin>
+                      <Insets left="10.0" />
+                  </GridPane.margin>
+              </Label>
+              <Label fx:id="lblUsername" text="Inserisci lettere e/o numeri" textAlignment="CENTER" textFill="#b00000" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <GridPane.margin>
+                      <Insets left="10.0" />
+                  </GridPane.margin>
+              </Label>
+              <Label fx:id="lblPassword" text="Non inserire spazi" textAlignment="CENTER" textFill="#b00000" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <GridPane.margin>
+                      <Insets left="10.0" />
+                  </GridPane.margin>
+              </Label>
+              <Label fx:id="lblRipetiPassword" text="Ripeti la password precedente" textAlignment="CENTER" textFill="#b00000" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <GridPane.margin>
+                      <Insets left="10.0" />
+                  </GridPane.margin>
+              </Label>
+         </children>
+      </GridPane>
+      <GridPane maxHeight="198.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="495.5555419921875" minWidth="150.0" prefWidth="154.66668701171875" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="445.33331298828125" minWidth="10.0" prefWidth="375.5555318196615" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.44436645507812" minWidth="150.0" prefWidth="170.22224595811633" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="40.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="ivAvatar" fitHeight="100.0" fitWidth="100.0" onDragDropped="#ivAvatarOnDragDropped" onDragOver="#ivAvatarOnDragOver" onMouseClicked="#ivAvatarOnMouseClicked" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <image>
+                  <Image url="@../Images/avatar.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblAvatar" alignment="CENTER" prefHeight="33.0" prefWidth="386.0" text="Errore nel caricamento dell' immagine" textAlignment="CENTER" textFill="#bca000" visible="false" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblColorPicker" prefHeight="46.0" prefWidth="124.0" text="Seleziona il tuo colore (scuro)" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
+            <ColorPicker fx:id="cpUser" onAction="#handleColorChange" prefWidth="128.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.rowSpan="2" GridPane.valignment="CENTER">
+               <value>
+                  <Color />
+               </value>
+            </ColorPicker>
+            <Label fx:id="lblConnessione" text="ERRORE DI CONNESSIONE: scollegarsi dal database" textFill="#9a0000" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+    </children>
+</GridPane>
